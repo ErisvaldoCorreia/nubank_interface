@@ -22,7 +22,7 @@ class NuAppBar extends StatelessWidget {
           onTap: onTap,
           child: Container(
             // Marcação de cor apenas para estudo de posição
-            color: Colors.red,
+            // color: Colors.red,
             height: MediaQuery.of(context).size.height * .16,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubankinterface/widgets/card_app_main.dart';
 import 'package:nubankinterface/widgets/nu_app_bar.dart';
 
 class Home extends StatefulWidget {
@@ -37,10 +38,11 @@ class _HomeState extends State<Home> {
             left: 0,
             right: 0,
             child: PageView(
+              physics: BouncingScrollPhysics(),
               children: <Widget>[
-                Container(color: Colors.amber,),
-                Container(color: Colors.black,),
-                Container(color: Colors.blue,),
+                CardApp(),
+                CardApp(),
+                CardApp(),
               ],
             ),
           ),
