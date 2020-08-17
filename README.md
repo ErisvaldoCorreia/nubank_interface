@@ -1,6 +1,8 @@
-# nubankinterface
+# NuBank Interface
 
 Estudo da Interface Nubank com Flutter
+Design aplicado apenas para estudos
+2020
 
 ## Getting Started
 
