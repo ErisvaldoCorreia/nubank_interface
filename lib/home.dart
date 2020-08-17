@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubankinterface/widgets/card_app_main.dart';
+import 'package:nubankinterface/page_view_home.dart';
 import 'package:nubankinterface/widgets/nu_app_bar.dart';
 
 class Home extends StatefulWidget {
@@ -32,19 +32,8 @@ class _HomeState extends State<Home> {
               });
             },
           ),
-          Positioned(
+          PageViewHome(
             top: MediaQuery.of(context).size.height * .20,
-            height: MediaQuery.of(context).size.height * .55,
-            left: 0,
-            right: 0,
-            child: PageView(
-              physics: BouncingScrollPhysics(),
-              children: <Widget>[
-                CardApp(),
-                CardApp(),
-                CardApp(),
-              ],
-            ),
           ),
         ],
       ),
