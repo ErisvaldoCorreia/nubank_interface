@@ -52,6 +52,7 @@ class _HomeState extends State<Home> {
             top: _top * .76,
             child: DotsCard(
               currentIndex: _currentIndex,
+              showMenu: _showMenu,
             ),
           ),
         ],

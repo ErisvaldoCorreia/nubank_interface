@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class DotsCard extends StatelessWidget {
 
   final int currentIndex;
+  final bool showMenu;
 
   Color getColor(int index) {
     return index == currentIndex ? Colors.white : Colors.white38;
@@ -11,52 +12,57 @@ class DotsCard extends StatelessWidget {
   const DotsCard({
     Key key,
     this.currentIndex,
+    this.showMenu
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        AnimatedContainer(
-          duration: Duration(
-            microseconds: 500,
+    return AnimatedOpacity(
+      duration: Duration(milliseconds: 200),
+      opacity: showMenu ? 0 : 1,
+      child: Row(
+        children: <Widget>[
+          AnimatedContainer(
+            duration: Duration(
+              microseconds: 500,
+            ),
+            width: 7,
+            height: 7,
+            decoration: BoxDecoration(
+              color: getColor(0),
+              shape: BoxShape.circle,
+            ),
           ),
-          width: 7,
-          height: 7,
-          decoration: BoxDecoration(
-            color: getColor(0),
-            shape: BoxShape.circle,
+          SizedBox(
+            width: 8,
           ),
-        ),
-        SizedBox(
-          width: 8,
-        ),
-        AnimatedContainer(
-          duration: Duration(
-            microseconds: 500,
+          AnimatedContainer(
+            duration: Duration(
+              microseconds: 500,
+            ),
+            width: 7,
+            height: 7,
+            decoration: BoxDecoration(
+              color: getColor(1),
+              shape: BoxShape.circle,
+            ),
           ),
-          width: 7,
-          height: 7,
-          decoration: BoxDecoration(
-            color: getColor(1),
-            shape: BoxShape.circle,
+          SizedBox(
+            width: 8,
           ),
-        ),
-        SizedBox(
-          width: 8,
-        ),
-        AnimatedContainer(
-          duration: Duration(
-            microseconds: 500,
+          AnimatedContainer(
+            duration: Duration(
+              microseconds: 500,
+            ),
+            width: 7,
+            height: 7,
+            decoration: BoxDecoration(
+              color: getColor(2),
+              shape: BoxShape.circle,
+            ),
           ),
-          width: 7,
-          height: 7,
-          decoration: BoxDecoration(
-            color: getColor(2),
-            shape: BoxShape.circle,
-          ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
