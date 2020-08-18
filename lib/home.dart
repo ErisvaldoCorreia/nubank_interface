@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nubankinterface/page_view_home.dart';
 import 'package:nubankinterface/widgets/card_dots_app.dart';
+import 'package:nubankinterface/widgets/menu_home.dart';
 import 'package:nubankinterface/widgets/nu_app_bar.dart';
 
 class Home extends StatefulWidget {
@@ -38,6 +39,10 @@ class _HomeState extends State<Home> {
                 _showMenu = !_showMenu;
               });
             },
+          ),
+          MenuHome(
+            top: _top * .20,
+            showMenu: _showMenu,
           ),
           PageViewHome(
             onChanged: (index) {
