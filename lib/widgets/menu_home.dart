@@ -23,6 +23,14 @@ class MenuHome extends StatelessWidget {
         child: Container(
           color: Colors.red,
           height: MediaQuery.of(context).size.height * .55,
+          child: Column(
+            children: <Widget>[
+            Image.asset(
+              "assets/images/qrcode.png",
+              height: 50,
+            ),
+            ],
+          ),
         ),
       ),
     );

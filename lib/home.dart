@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
             },
           ),
           MenuHome(
-            top: _top * .20,
+            top: _top * .21,
             showMenu: _showMenu,
           ),
           PageViewHome(
