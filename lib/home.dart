@@ -23,6 +23,9 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+
+    double _top = MediaQuery.of(context).size.height;
+
     return Scaffold(
       backgroundColor: Colors.purple[800],
       body: Stack(
@@ -42,10 +45,11 @@ class _HomeState extends State<Home> {
                 _currentIndex = index;
               });
             },
-            top: MediaQuery.of(context).size.height * .20,
+            top: !_showMenu ? _top * .20 : _top * .76,
+            showMenu: _showMenu,
           ),
           Positioned(
-            top: MediaQuery.of(context).size.height * .76,
+            top: _top * .76,
             child: DotsCard(
               currentIndex: _currentIndex,
             ),
