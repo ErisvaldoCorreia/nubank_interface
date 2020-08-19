@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
                 _currentIndex = index;
               });
             },
-            top: !_showMenu ? _top * .20 : _top * .80,
+            top: !_showMenu ? _top * .20 : _top * .85,
             showMenu: _showMenu,
           ),
           Positioned(
