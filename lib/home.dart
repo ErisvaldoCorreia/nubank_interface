@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
             },
           ),
           MenuHome(
-            top: _top * .21,
+            top: _top * .19,
             showMenu: _showMenu,
           ),
           PageViewHome(
@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
                 _currentIndex = index;
               });
             },
-            top: !_showMenu ? _top * .20 : _top * .76,
+            top: !_showMenu ? _top * .20 : _top * .80,
             showMenu: _showMenu,
           ),
           Positioned(
