@@ -15,7 +15,7 @@ class ItemMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 37,
+      height: 43,
       decoration: BoxDecoration(
         border: Border(
           bottom: BorderSide(
